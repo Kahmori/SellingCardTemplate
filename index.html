@@ -1,26 +1,44 @@
 <!DOCTYPE html>
+<!--The attribute lang define the language of your content to the web-->
 <html lang="en">
 <head>
+  <!--The attribute charset setted as UTF-8 is important to secure we will not 
+  have problems while trying to use word accents or special characters-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
+  <!--This link below, define the icon who appears in the tab of your page-->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
+  <!--Those links below are necessary to provide the fonts taken from Google Fonts, 
+    but there is also other ways to include fonts in your project-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
   
+  <!--The tag <title> define the title of your tab-->
   <title>Price Grid Project</title>
-
   
+  <!--Into the tag <style>, we can add all styles we want to apply to the page,
+  but in a professional developtment, we use to separated the styles in another
+  file name-you-give-to-the-file.css, to apply the imports from the other file,
+  we would import it in the head by other tag <link>-->
   <style>
     body{
       background-color: black;
     }
 
+    /*When you define the style based in a tag as i did in the <p> below,
+    you must be careful because it will apply the styles for all tags of
+    that same kind into your project*/
+
     p{
       color: white;
     }
+
+    /*Those are the definitions to the font styles of this project,
+    they are in form of classes, then to apply you should add the 
+    class in the desired tag*/
 
     .karla-400 {
       font-family: "Karla", sans-serif;
@@ -35,6 +53,9 @@
       font-weight: 700;
       font-style: normal;
     }
+
+    /*When you define the style of a class, you use a dot before the classname,
+    but when you apply it to an id, you should use a # instead*/
 
     #mainTitle{ 
       color: hsl(179, 62%, 43%); 
@@ -86,11 +107,11 @@
     #div1{
       background-color: white; 
       border-radius: 15px 15px 0 0; 
-      padding: 0.5rem 2rem 2rem 2rem;
+      padding: 0.5rem 2rem 2rem 2rem; /*Defines some space from the own component*/
     }
 
     #products p{
-      margin: 0.125rem;
+      margin: 0.125rem; /*Defines some space from other components*/
     }
 
     #underSide button{ 
@@ -98,11 +119,16 @@
       font-size: 1.25em; 
       margin-top: 1.5rem;
       height: 50px; 
-      background-color: greenyellow; 
+      background-color: greenyellow; /*Defines the color of the background*/
       border-radius: 15px; 
-      color: white; 
+      color: white; /*Defines the color of the text*/
       border: 1px solid greenyellow;
     }
+
+    /*@media screen is what define when in determinated cases, which behaviour to have*/
+
+    /*But don't forget it is using the base, defined previously to all the project, and will
+    override just if it has a different command for doing it*/
 
     @media screen and (max-width: 1200px) {
       #main{
@@ -125,10 +151,12 @@
   </style>
   
 </head>
+<!--Inside the body we will put all the content html we actually want to appear on the screen-->
 <body>
-
+  <!--The tag <div> is used to create groups of content-->
   <div id="main">
     <div id="div1" class="karla-400">
+      <!--The tag <p> represents a paragraph-->
       <p id="mainTitle" class="karla-700">Join our community</p>
       <p id="emphasis">30-day, hassle-free money back guarantee</p>
       <p id="grayEmphasis">Gain access to our full library of tutorials along with expert code reviews. <br/>
@@ -137,8 +165,13 @@
     <div id="underSide">
       <div id="div2" class="smallBlocks karla-400">
         <p class="titles karla-700">Monthly Subscription</p>
+        <!--A <strong> tag is used in semantic html, tipically used to
+        the strong importance texts of the project, and also gives that
+        a bold appareance-->
         <p><strong class="karla-700">&dollar;29</strong> per month</p>
         <p>Full access for less than &dollar;1 a day</p>
+        <!--A button could have different types and goals, also make sure to
+        define directly to the button its size and color-->
         <button>Sign Up</button>
       </div>
       <div id="div3" class="smallBlocks karla-400">
