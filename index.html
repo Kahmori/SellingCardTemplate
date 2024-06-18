@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  
+  <title>Price Grid Project</title>
+
+  
+  <style>
+    body{
+      background-color: black;
+    }
+
+    p{
+      color: white;
+    }
+
+    .karla-400 {
+      font-family: "Karla", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .karla-700 {
+      font-family: "Karla", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    #mainTitle{ 
+      color: hsl(179, 62%, 43%); 
+      font-size: 1.75em;
+    }
+
+    #emphasis{
+      color: rgb(29, 209, 29);
+    }
+
+    .titles{
+      color: white; 
+      font-size: 1.5em;
+    }
+
+    #grayEmphasis{
+      color: gray;
+    }
+    strong{
+      font-size: 3em; 
+      margin-right: 0.75rem;
+    }
+
+    #main{ 
+      height: 40rem; 
+      display: flex;
+      flex-direction: column; 
+      justify-content: center; 
+      margin: 0 20rem;
+    }
+
+    #underSide{ 
+      display: flex; 
+      flex-direction: row;
+    }
+    #div2, #div3{ 
+      width: 50%;
+    }
+    #div2{
+      background-color: hsl(179, 62%, 43%); 
+      border-radius: 0 0 0 15px; 
+      padding: 0.5rem 2rem 2rem 2rem;
+    }
+    #div3{
+      background-color: hsl(228, 45%, 44%); 
+      border-radius: 0 0 15px 0; 
+      padding: 0.5rem 2rem 2rem 2rem;
+    }
+    #div1{
+      background-color: white; 
+      border-radius: 15px 15px 0 0; 
+      padding: 0.5rem 2rem 2rem 2rem;
+    }
+
+    #products p{
+      margin: 0.125rem;
+    }
+
+    #underSide button{ 
+      width: 100%; 
+      font-size: 1.25em; 
+      margin-top: 1.5rem;
+      height: 50px; 
+      background-color: greenyellow; 
+      border-radius: 15px; 
+      color: white; 
+      border: 1px solid greenyellow;
+    }
+
+    @media screen and (max-width: 1200px) {
+      #main{
+        height: fit-content;
+        margin: 3rem 5rem 3rem 3rem;
+      }
+      #underSide{
+        flex-direction: column;
+      }
+      #div1, #div2, #div3{ 
+        width: 92%;
+      }
+      #div2{
+        border-radius: 0;
+      }
+      #div3{
+        border-radius: 0 0 15px 15px;
+      }
+    }
+  </style>
+  
+</head>
+<body>
+
+  <div id="main">
+    <div id="div1" class="karla-400">
+      <p id="mainTitle" class="karla-700">Join our community</p>
+      <p id="emphasis">30-day, hassle-free money back guarantee</p>
+      <p id="grayEmphasis">Gain access to our full library of tutorials along with expert code reviews. <br/>
+        Perfect for any developers who are serious about honing their skills.</p>
+    </div>
+    <div id="underSide">
+      <div id="div2" class="smallBlocks karla-400">
+        <p class="titles karla-700">Monthly Subscription</p>
+        <p><strong class="karla-700">&dollar;29</strong> per month</p>
+        <p>Full access for less than &dollar;1 a day</p>
+        <button>Sign Up</button>
+      </div>
+      <div id="div3" class="smallBlocks karla-400">
+        <p class="titles karla-700">Why Us</p>
+        <div id="products">
+          <p>Tutorials by industry experts</p>
+          <p>Peer &amp; expert code review</p>
+          <p>Coding exercises</p>
+          <p>Access to our GitHub repos</p>
+          <p>Community forum</p>
+          <p>Flashcard decks</p>
+          <p>New videos every week</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
